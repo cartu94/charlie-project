@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-COmposizione gruppo: 
+Composizione gruppo: 
 
 Luca Carturan
 
