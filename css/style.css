@@ -1,0 +1,71 @@
+/*cose da aggiungere:
+- max width nell'header
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../assets/lumariakingdom.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  color: white;
+  height: 70px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+main {
+    flex-direction: column;
+    height: calc(100vh - 50px - 70px);
+}
+
+.desc-testo {
+  text-align: center;
+  background-color: rgba(102, 37, 73, 0.8);
+}
+
+#btn-start {
+  background-color: #ae445a;
+  text-transform: uppercase;
+  color: #f39f5a;
+  margin-top: 20px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 50px;
+  gap: 5px;
+}
+
+ul {
+    display: flex;
+    gap: 5px;
+}
+
+li { 
+    list-style: none;
+}
