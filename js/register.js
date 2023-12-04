@@ -1,13 +1,16 @@
-document.getElementById("btn-register").addEventListener("click", function () {
+/**
+ * Funzione che registra l'utente in sessione
+ */
+window.register = function () {
   // prendo il valore inserito dall'utente
   let userName = document.getElementById("player-name").value;
-  //   controllo-- se esiste salvo in locale
+  //   controllo-- se esiste salvo in sessione
   if (userName) {
-    localStorage.setItem("username", userName);
-    alert("Ti sei registrato");
+    sessionStorage.setItem("username", userName);
+    console.log("Ti sei registrato");
   } else {
-    alert("Inserisci un nome valido!");
+    console.error("Inserisci un nome valido!");
   }
-});
+};
 
-console.log(localStorage.getItem("username"));
+export default register;
