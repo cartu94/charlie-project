@@ -2,7 +2,17 @@
 
 ## Introduzione
 
-Che senso ha? - Si
+Composizione gruppo: 
+
+Luca Carturan
+
+Federica Tosti
+
+Toukir Islam Shovo
+
+Mario Tolvo
+
+Vittorio D'Ambrosio
 
 ## Struttura del Codice
 
