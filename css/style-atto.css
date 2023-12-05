@@ -3,11 +3,6 @@ body > h1, h3 {
   margin-top: 20px;
 }
 
-main {
-  /* TODO: Sistemare*/
-  height: calc(100vh - 50px - 70px - 40px - 40px - 19px);  /* 100vh - footer - header - margin - padding - border */
-}
-
 #choice-container {
   display: flex;
   justify-content: space-evenly;
