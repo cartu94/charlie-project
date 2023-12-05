@@ -2,6 +2,14 @@ import router from "./router.js";
 const textDescription = document.getElementById("text-desc");
 const optionButtons = document.getElementById("choice-container");
 
+
+function random(min, max){
+  return Math.floor(Math.random()*(max - min) + min);
+}
+
+
+const tribeIndex = random(0, 3);
+const tribe = ("tribù del fuoco", "tribù dell'acqua", "tribù della terra", "tribù del vento")
 window.showTextNode = function (textNodeIndex, act) {
   console.log(typeof textNodeIndex);
   if (textNodeIndex.toString().includes("route")) {
@@ -71,7 +79,7 @@ export const act1 = [
       {
         type: "quiz",
         answer: "fiume",
-        nextText: "route act_2",
+        nextText: 5,
       },
     ],
   },
@@ -82,8 +90,7 @@ export const act1 = [
       {
         type: "quiz",
         answer: "ferula",
-        nextText: "route act_2",
-        
+        nextText: 5,
       },
     ],
   },
@@ -94,6 +101,17 @@ export const act1 = [
       {
         type: "quiz",
         answer: "fungo",
+        nextText: 5,
+      },
+    ],
+  },
+  {
+    id: 5,
+    text: 'Finito l\'enigma ti si avvicina il druido che ti consegna il Bastone di Zephyrion, non ti è ancora chiaro come utilizzarlo ma l\'anziano ti ha assicurato che nel momento del bisogno ti aiuterá a ritrovare la via.',
+    options: [
+      {
+        type: "button",
+        text:"Continua",
         nextText: "route act_2",
       },
     ],
@@ -102,32 +120,21 @@ export const act1 = [
 export const act2 = [
   {
     id: 1,
-    text: "testo spazio 1",
+    text: "Il tuo viaggio ti porta al Villaggio degli Elementi, dove incontri quattro tribù diverse che custodiscono le chiavi per sbloccare la magia che protegge il Cuore di Lumaria. Ogni tribù è legata a un elemento (fuoco, acqua, terra, aria) e ti pone alla prova con prove magiche per dimostrare la tua connessione con l'elemento.Ti si avvicina il rappresentante della " + tribe[tribeIndex] + " che ti pone davanti a una prova:",
     options: [
       {
-        text: "option 1 play",
-        nextText: 2,
-      },
-      {
-        text: "Leave the game",
+        type: "button",
+        text: "Continua",
         nextText: 2,
       },
     ],
   },
   {
     id: 2,
-    text: "test azione 2",
+    text: "Tribù del Fuoco: Prova della Fiamma Ardente\n La tribù del Fuoco ti accoglie con entusiasmo. La loro prova consiste nel dimostrare il controllo sulla fiamma. Ti conducono in una grotta dove una fiamma magica danza liberamente. La tua sfida è manipolare la fiamma in modi creativi senza bruciare nulla. Potresti dover creare figure danzanti, farle cambiare colore o trasformarle in piccoli animali di fuoco. La tribù osserva con attenzione la tua padronanza sulla magia del fuoco.",
     options: [
       {
         text: "option azione 1 ",
-        nextText: 3,
-      },
-      {
-        text: " option azione 2",
-        nextText: 3,
-      },
-      {
-        text: "torna capo",
         nextText: 3,
       },
     ],
@@ -152,4 +159,87 @@ export const act2 = [
   },
 ];
 
+export const act3 = [
+  {
+    id: 1,
+    text: "Il tuo viaggio ti porta al Villaggio degli Elementi, dove incontri quattro tribù diverse che custodiscono le chiavi per sbloccare la magia che protegge il Cuore di Lumaria. Ogni tribù è legata a un elemento (fuoco, acqua, terra, aria) e ti pone alla prova con prove magiche per dimostrare la tua connessione con l'elemento.Ti si avvicina il rappresentante della " + tribe[tribeIndex] + " che ti pone davanti a una prova:",
+    options: [
+      {
+        type: "button",
+        text: "Continua",
+        nextText: 2,
+      },
+    ],
+  },
+  {
+    id: 2,
+    text: "Tribù del Fuoco: Prova della Fiamma Ardente\n La tribù del Fuoco ti accoglie con entusiasmo. La loro prova consiste nel dimostrare il controllo sulla fiamma. Ti conducono in una grotta dove una fiamma magica danza liberamente. La tua sfida è manipolare la fiamma in modi creativi senza bruciare nulla. Potresti dover creare figure danzanti, farle cambiare colore o trasformarle in piccoli animali di fuoco. La tribù osserva con attenzione la tua padronanza sulla magia del fuoco.",
+    options: [
+      {
+        text: "option azione 1 ",
+        nextText: 3,
+      },
+    ],
+  },
+  {
+    id: 3,
+    text: "testo azione 3",
+    options: [
+      {
+        text: "option azione 1",
+        nextText: 4,
+      },
+      {
+        text: "option azione 2",
+        nextText: 5,
+      },
+      {
+        text: "option azione 3",
+        nextText: 2,
+      },
+    ],
+  },
+];
+
+export const ending = [
+  {
+    id: 1,
+    text: "Il tuo viaggio ti porta al Villaggio degli Elementi, dove incontri quattro tribù diverse che custodiscono le chiavi per sbloccare la magia che protegge il Cuore di Lumaria. Ogni tribù è legata a un elemento (fuoco, acqua, terra, aria) e ti pone alla prova con prove magiche per dimostrare la tua connessione con l'elemento.Ti si avvicina il rappresentante della " + tribe[tribeIndex] + " che ti pone davanti a una prova:",
+    options: [
+      {
+        type: "button",
+        text: "Continua",
+        nextText: 2,
+      },
+    ],
+  },
+  {
+    id: 2,
+    text: "Tribù del Fuoco: Prova della Fiamma Ardente\n La tribù del Fuoco ti accoglie con entusiasmo. La loro prova consiste nel dimostrare il controllo sulla fiamma. Ti conducono in una grotta dove una fiamma magica danza liberamente. La tua sfida è manipolare la fiamma in modi creativi senza bruciare nulla. Potresti dover creare figure danzanti, farle cambiare colore o trasformarle in piccoli animali di fuoco. La tribù osserva con attenzione la tua padronanza sulla magia del fuoco.",
+    options: [
+      {
+        text: "option azione 1 ",
+        nextText: 3,
+      },
+    ],
+  },
+  {
+    id: 3,
+    text: "testo azione 3",
+    options: [
+      {
+        text: "option azione 1",
+        nextText: 4,
+      },
+      {
+        text: "option azione 2",
+        nextText: 5,
+      },
+      {
+        text: "option azione 3",
+        nextText: 2,
+      },
+    ],
+  },
+];
 export default showTextNode;
