@@ -8,16 +8,6 @@ main {
   height: calc(100vh - 50px - 70px - 40px - 40px - 19px);  /* 100vh - footer - header - margin - padding - border */
 }
 
-main #text-desc {
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.29);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(1.3px);
-  -webkit-backdrop-filter: blur(1.3px);
-  border: 1px solid #FFF;
-}
-
 #choice-container {
   display: flex;
   justify-content: space-evenly;
@@ -28,14 +18,5 @@ main #text-desc {
   border-radius: 40%;
   padding: 10px;
   
-  background: linear-gradient(
-    to right,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
+  background: #f1f1f1;
 }
