@@ -3,9 +3,9 @@
  */
 const routes = {
   home: "/index.html",
-  reg: "/acts/register.html",
-  act_1: "/acts/act_1.html",
-  act_2: "/acts/act_2.html",
+  reg: "/html/register.html",
+  act_1: "/html/act_1.html",
+  act_2: "/html/act_2.html",
 };
 
 /**

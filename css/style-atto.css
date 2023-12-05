@@ -8,7 +8,7 @@ main {
   height: calc(100vh - 50px - 70px - 40px - 40px - 19px);  /* 100vh - footer - header - margin - padding - border */
 }
 
-main .text-desc {
+main #text-desc {
   padding: 20px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.29);
@@ -18,12 +18,12 @@ main .text-desc {
   border: 1px solid #FFF;
 }
 
-.choice-container {
+#choice-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.choice-container button {
+#choice-container button {
   font-size: 30px;
   border-radius: 40%;
   padding: 10px;
