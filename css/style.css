@@ -5,6 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none;
 }
 body {
   background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)), url(../assets/lumariakingdom.jpg);
@@ -41,7 +46,7 @@ header {
   width: 100%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
   padding: 0 50px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -77,6 +82,12 @@ button:hover {
   color: #0F0F0F;
   cursor: pointer;
 }
+button:disabled {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-color: grey;
+  color: grey;
+  cursor: not-allowed;
+}
 
 footer {
   display: flex;
@@ -88,7 +99,7 @@ footer {
   width: 100%;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.8);
   gap: 5px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }

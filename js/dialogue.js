@@ -29,7 +29,6 @@ window.showTextNode = function (textNodeIndex, act) {
       if(option.ok === false){
         button.addEventListener("click", () => {
           button.disabled = true;
-          alert("Risposta errata, riprova");
         });
       } else {
         button.addEventListener("click", () =>
@@ -52,6 +51,7 @@ window.showTextNode = function (textNodeIndex, act) {
         } else {
           const error = document.createElement("p");
           error.innerText = "Risposta errata, riprova";
+          error.classList.add("error");
           optionButtons.appendChild(error);
         }
       });
@@ -149,7 +149,7 @@ export const act2 = [
       {
         type: "button", ok: true,
         text: "Roll",
-        nextText: "route act_3",
+        nextText: 6,
       },
     ],
   },
@@ -160,7 +160,7 @@ export const act2 = [
       {
         type: "button", ok: true,
         text: "Roll",
-        nextText: "route act_3",
+        nextText: 6,
       },
     ],
   },
@@ -171,7 +171,7 @@ export const act2 = [
       {
         type: "button", ok: true,
         text: "Roll",
-        nextText: "route act_3",
+        nextText: 6,
       },
     ],
   },
@@ -182,7 +182,7 @@ export const act2 = [
       {
         type: "button", ok: true,
         text: "Roll",
-        nextText: "route act_3",
+        nextText: 6,
       },
     ],
   },

@@ -1,10 +1,14 @@
-body > h1, h3 {
+main > h1, h3 {
   text-align: center;
-  margin-top: 20px;
+  color: #f0f0f0;
 }
 
 #choice-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
 }
 
+.error {
+  color: red;
+}
