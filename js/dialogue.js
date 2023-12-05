@@ -26,9 +26,16 @@ window.showTextNode = function (textNodeIndex, act) {
     if (option.type === "button") {
       const button = document.createElement("button");
       button.innerText = option.text;
-      button.addEventListener("click", () =>
-        window.showTextNode(option.nextText, act)
-      );
+      if(option.ok === false){
+        button.addEventListener("click", () => {
+          button.disabled = true;
+          alert("Risposta errata, riprova");
+        });
+      } else {
+        button.addEventListener("click", () =>
+          window.showTextNode(option.nextText, act)
+        );
+      }
       optionButtons.appendChild(button);
     } else if (option.type === "quiz") {
       const quiz = document.createElement("input");
@@ -231,7 +238,7 @@ export const act3 = [
       {
         type: "button", ok: true,
         text: "Drago",
-        nextText: "route act_ending",
+        nextText: "route ending",
       },
       {
         type: "button", ok: false,

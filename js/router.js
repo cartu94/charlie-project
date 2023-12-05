@@ -6,6 +6,8 @@ const routes = {
   reg: "/html/register.html",
   act_1: "/html/act_1.html",
   act_2: "/html/act_2.html",
+  act_3: "/html/act_3.html",
+  ending: "/html/ending.html",
 };
 
 /**
