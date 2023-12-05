@@ -1,6 +1,6 @@
 import router from "./router.js";
 import register from "./register.js";
-import { act1 } from "./dialogue.js";
+import { act1, act2, act3, ending } from "./dialogue.js";
 import showTextNode from "./dialogue.js";
 
 window.registerAndMove = function (event) {
@@ -10,13 +10,21 @@ window.registerAndMove = function (event) {
 };
 console.log(sessionStorage.getItem("username"));
 
+
+const actMapping = {
+  "/html/act_1.html": act1,
+  "/html/act_2.html": act2,
+  "/html/act_3.html": act3,
+  "/html/ending.html": ending,
+};
+
 function startAct() {
   if (
     window.location.pathname !== "/index.html" &&
     window.location.pathname !== "/html/register.html"
+
   ) {
-    console.log(window.location.pathname);
-    showTextNode(1, act1);
+  showTextNode(1, actMapping[window.location.pathname]);  
   }
 }
 

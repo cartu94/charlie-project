@@ -124,7 +124,7 @@ export const act2 = [
     options: [
       {
         type: "button",
-        text: "Continua",
+        text: "Pippo",
         nextText: 2,
       },
     ],
